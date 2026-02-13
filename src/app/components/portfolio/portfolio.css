@@ -1,0 +1,35 @@
+.project-card img {
+  width: 100%;    /* O el ancho fijo que desees, ej: 200px */
+  height: auto;
+  max-width: 250px; /* Limita el tamaño máximo */
+}
+/* Contenedor de la imagen dentro de la tarjeta */
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+
+  /* ESTO CENTRA TODO EL CONTENIDO */
+  display: flex;
+  flex-direction: column; /* Alinea los elementos uno debajo de otro */
+  align-items: center;    /* Centra horizontalmente */
+  text-align: center;     /* Centra el texto */
+  padding-bottom: 20px;   /* Espacio al final de la tarjeta */
+}
+
+.project-card img {
+  width: auto;            /* No obliga a la imagen a ocupar todo el ancho */
+  max-width: 150px;       /* Ajusta este valor para que sea "pequeña" como quieres */
+  height: 150px;          /* Altura fija para mantener uniformidad */
+  object-fit: contain;    /* Evita que la imagen se deforme */
+  margin: 20px 0;         /* Espacio arriba y abajo de la imagen */
+}
+
+.card-content {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Asegura que el botón y textos se centren */
+}

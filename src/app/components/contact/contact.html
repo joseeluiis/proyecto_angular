@@ -1,0 +1,20 @@
+<section class="contact-container">
+  <h2>Contacto</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" formControlName="nombre" placeholder="Tu nombre">
+      <span *ngIf="contactForm.get('nombre')?.invalid && contactForm.get('nombre')?.touched">Mínimo 3 letras</span>
+    </div>
+
+    <div class="form-group">
+      <input type="email" formControlName="email" placeholder="Tu correo">
+      <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Email no válido</span>
+    </div>
+
+    <div class="form-group">
+      <textarea formControlName="mensaje" placeholder="Tu mensaje"></textarea>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Enviar Mensaje</button>
+  </form>
+</section>

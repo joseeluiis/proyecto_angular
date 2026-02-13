@@ -1,0 +1,97 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Tu configuración de temas para cumplir con el Tema 14 (LocalStorage) */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-theme {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+:root {
+  --primary: #007bff;
+  --dark: #1a1a1a;
+  --light: #f8f9fa;
+  --grey: #6c757d;
+}
+
+/* 1. CONFIGURACIÓN PARA PEGAR EL FOOTER ABAJO */
+html, body {
+  height: 100%; /* Obliga al navegador a usar todo el alto */
+  margin: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura mínima de toda la pantalla */
+}
+
+/* Este 'main' debe envolver al router-outlet en tu app.html */
+main {
+  flex: 1;
+  margin-left: 50px/* Crece para empujar al footer al final */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light);
+}
+
+/* 2. ESTILOS DE COMPONENTES */
+
+/* Portfolio */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover { transform: translateY(-5px); }
+.project-card img { width: 100%; height: 180px; object-fit: cover; }
+.card-content { padding: 15px; }
+
+.btn-repo {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: var(--dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Contacto */
+.contact-container { max-width: 500px; margin: 40px auto; padding: 20px; }
+.form-group { margin-bottom: 15px; }
+input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box;}
+button { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; }
+button:disabled { background: var(--grey); }
+
+/* Home / Bio */
+.home-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  margin-bottom: 20px;
+}

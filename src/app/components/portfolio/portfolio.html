@@ -1,0 +1,13 @@
+<section class="portfolio-section">
+  <h2>Mis Proyectos</h2>
+  <div class="projects-grid">
+    <div *ngFor="let p of proyectos" class="project-card">
+      <img [src]="p.imagen" [alt]="p.titulo">
+      <div class="card-content">
+        <h3>{{ p.titulo }}</h3>
+        <p>{{ p.desc }}</p>
+        <a [href]="p.repo" target="_blank" class="btn-repo">Ver Código</a>
+      </div>
+    </div>
+  </div>
+</section>

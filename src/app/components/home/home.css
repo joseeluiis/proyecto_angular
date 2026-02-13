@@ -1,0 +1,13 @@
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* La hace circular */
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin: 20px 0;
+}
+
+.home-container {
+  text-align: center;
+  padding: 50px 20px;
+}
