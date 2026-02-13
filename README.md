@@ -1,59 +1,36 @@
-# Proyeccto
+# 🚀 Portfolio Personal - Proyecto Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Este es un proyecto de portfolio personal desarrollado con **Angular**, diseñado para mostrar mis trabajos, habilidades y proporcionar una vía de contacto. El sitio sigue una arquitectura de componentes y utiliza el sistema de enrutamiento dinámico de Angular.
 
-## Development server
+## 🔹 Estructura del Proyecto
 
-To start a local development server, run:
+La aplicación está dividida en componentes independientes y reutilizables para garantizar un código limpio y escalable:
 
-```bash
-ng serve
-```
+* **Página de Inicio (Home):** Presentación personal que incluye una breve biografía y mi fotografía.
+* **Portfolio:** Una sección dinámica que muestra una lista de mis proyectos actuales. Cada tarjeta de proyecto incluye una imagen centrada, descripción detallada y enlaces al repositorio de GitHub.
+* **Contacto:** Formulario funcional implementado con **Angular Reactive Forms**, que incluye validaciones en tiempo real para asegurar que los datos ingresados sean correctos antes del envío.
+* **Componentes Globales:** Navbar (con navegación activa y logo pegado al margen) y Footer fijo en la parte inferior.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Tecnologías Utilizadas
 
-## Code scaffolding
+* **Angular** (Arquitectura Standalone)
+* **TypeScript** (Lógica de la aplicación)
+* **CSS3** (Diseño responsivo y Flexbox para alineación)
+* **Angular Router** (Navegación entre secciones)
+* **Reactive Forms** (Validación de formularios)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📋 Requisitos de la Práctica Cumplidos
 
-```bash
-ng generate component component-name
-```
+✅ **Estructura:** Uso de múltiples componentes siguiendo la arquitectura de Angular.
+✅ **Routing:** Configuración de rutas en `app.routes.ts` y uso de `<router-outlet>`.
+✅ **Navegación:** Implementación de `RouterLink` en el Navbar para navegación sin recarga de página.
+✅ **Formularios:** Uso de formularios reactivos con validaciones de campos obligatorios y formato de email.
+✅ **Diseño:** Estilos personalizados para centrado de tarjetas, imágenes y un layout "Sticky Footer".
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Instalación y Ejecución
 
-```bash
-ng generate --help
-```
+Si deseas ejecutar este proyecto localmente, sigue estos pasos:
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/joseeluiis/proyecto_angular.git](https://github.com/joseeluiis/proyecto_angular.git)
