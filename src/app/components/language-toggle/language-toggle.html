@@ -1,0 +1,4 @@
+<button class="lang-toggle" (click)="languageService.toggleLanguage()"
+    [attr.aria-label]="languageService.currentLang() === 'es' ? 'Switch to English' : 'Cambiar a Español'">
+    <span class="lang-code">{{ languageService.currentLang() }}</span>
+</button>

@@ -1,20 +1,22 @@
 <section class="contact-container">
-  <h2>Contacto</h2>
+  <h2>{{ 'contact.title' | translate }}</h2>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <input type="text" formControlName="nombre" placeholder="Tu nombre">
-      <span *ngIf="contactForm.get('nombre')?.invalid && contactForm.get('nombre')?.touched">Mínimo 3 letras</span>
+      <input type="text" formControlName="nombre" [placeholder]="'contact.placeholder.name' | translate">
+      <span *ngIf="contactForm.get('nombre')?.invalid && contactForm.get('nombre')?.touched">{{ 'contact.error.name' |
+        translate }}</span>
     </div>
 
     <div class="form-group">
-      <input type="email" formControlName="email" placeholder="Tu correo">
-      <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Email no válido</span>
+      <input type="email" formControlName="email" [placeholder]="'contact.placeholder.email' | translate">
+      <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">{{ 'contact.error.email' |
+        translate }}</span>
     </div>
 
     <div class="form-group">
-      <textarea formControlName="mensaje" placeholder="Tu mensaje"></textarea>
+      <textarea formControlName="mensaje" [placeholder]="'contact.placeholder.message' | translate"></textarea>
     </div>
 
-    <button type="submit" [disabled]="contactForm.invalid">Enviar Mensaje</button>
+    <button type="submit" [disabled]="contactForm.invalid">{{ 'contact.send' | translate }}</button>
   </form>
 </section>
